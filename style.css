@@ -1,0 +1,21 @@
+.app{
+    background-color: black;
+    color:white;
+}
+
+.inputframe{
+    white-space: nowrap;
+}
+.inputframe *{
+    display: inline;
+}
+
+.input{
+    color: white;
+    resize: none;
+    height: 20px;
+    width: 300px;
+    background-color: black;
+    scroll-margin: none;
+    overflow: auto;
+}
