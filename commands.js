@@ -1,10 +1,8 @@
 document.addEventListener("keypress", function (e) {
   if (e.key == "Enter") {
-    document.getElementsByTagName("textarea")[
-      document.getElementsByTagName("textarea").length - 1
-    ].readOnly = "false";
-    outputs(document.getElementById("input").val());
-    document.querySelector(".input").textContent;
+    var elem = document.getElementsByClassName("input");
+    elem[elem.length - 1].readOnly = "false";
+    outputs(elem[elem.length - 1].value);
   }
 });
 
@@ -21,7 +19,6 @@ var commands = [
 function outputs(cmd) {
   switch (cmd.toLowerCase()) {
     case "whois":
-      alert("whois");
       addText("I am Rithvik Kasarla.");
       break;
     case "projects":
@@ -35,7 +32,7 @@ function outputs(cmd) {
     case "history":
       break;
     case "help":
-      addText("hi");
+      addText("get your own help");
       break;
     default:
       addText("Not a Command. Type help to find more commands");
@@ -44,7 +41,7 @@ function outputs(cmd) {
 }
 
 function addText(text) {
-  var speed = 50;
+  var speed = 40;
   var div = document.createElement("div");
   document.body.appendChild(div);
   for (let char = 0; char < text.length; char++) {
