@@ -15,7 +15,7 @@ document.addEventListener("keypress", function (e) {
   }
 });
 
-var projects = [
+var commands = [
   "Whois",
   "Projects",
   "Youtube",
@@ -25,7 +25,7 @@ var projects = [
   "Help",
 ];
 
-var projectTechnologies = [
+var commandDescriptions = [
   "Who is Rithvik Kasarla",
   "Coding Projects Done",
   "Youtube Channel",
@@ -105,8 +105,8 @@ function addHelpCommand() {
           var char = 0;
           char <
           Math.max(
-            projects[commandNumber].length,
-            projectTechnologies[commandNumber].length
+            commands[commandNumber].length,
+            commandDescriptions[commandNumber].length
           );
           char++
         ) {
@@ -114,8 +114,8 @@ function addHelpCommand() {
             (char, commandNumber, cmd) => {
               console.log(projects[commandNumber]);
               console.log(char);
-              if (char < projects[commandNumber].length) {
-                cmd[cmd.length - 1].innerHTML += projects[commandNumber][char];
+              if (char < commands[commandNumber].length) {
+                cmd[cmd.length - 1].innerHTML += commands[commandNumber][char];
               }
             },
             char * 30,
@@ -125,9 +125,9 @@ function addHelpCommand() {
           );
           setTimeout(
             (char, commandNumber, cmd) => {
-              if (char < projectTechnologies[commandNumber].length) {
+              if (char < commandDescriptions[commandNumber].length) {
                 cmdDescp[cmdDescp.length - 1].innerHTML +=
-                  projectTechnologies[commandNumber][char];
+                  commandDescriptions[commandNumber][char];
               }
             },
             char * 20,
@@ -136,8 +136,6 @@ function addHelpCommand() {
             cmdDescp
           );
         }
-
-        responseBody.append(line);
       },
       commandNumber * 500,
       commandNumber
@@ -198,8 +196,6 @@ function addProjectCommand() {
             projDescp
           );
         }
-
-        responseBody.append(line);
       },
       projectNumber * 500,
       projectNumber
