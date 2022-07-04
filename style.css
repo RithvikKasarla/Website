@@ -19,3 +19,15 @@
     scroll-margin: none;
     overflow: auto;
 }
+
+.line{
+    display: inline;
+}
+
+.cmd{
+    white-space: nowrap;
+}
+
+.cmdDesc{
+    white-space: nowrap;
+}
