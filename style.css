@@ -1,7 +1,19 @@
 .app{
-    background-color: black;
-    color:white;
+    background-color: rgb(20, 20, 20);
+    color: #a9d39e;
+    font-size: 18px;
 }
+
+@keyframes type{ 
+    from { width: 0; } 
+    } 
+
+.ascii-art{
+    font-size: 15px;
+    font-family: monospace;
+    white-space: pre;
+}
+
 
 .inputframe{
     white-space: nowrap;
@@ -10,24 +22,129 @@
     display: inline;
 }
 
+
+
+.helpCommand{
+    display: table-row;
+    font-family: "Courier";
+    margin: 10px 0 0 10px;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100em;
+    animation: type 3 steps(60, end); 
+}
+
+
+.helpCommand *{
+    display: inline;
+}
+
+.cmd{
+    display: inline;
+    white-space: nowrap;
+    color: rgb(140, 196, 189);
+    text-shadow:1px 1px 10px rgb(140, 196, 189), 1px 1px 10px #ccc;
+}
+
+.cmdDesc{
+    display: table-cell;
+    white-space: nowrap;
+    
+}
+
+.cmdDesc *{
+    align-items:left ;
+    margin-left: auto;
+}
+
+
+.projectsCommand{
+    
+    display: table-row;
+    font-family: "Courier";
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100em;
+    animation: type 3 steps(60, end); 
+}
+.projectsCommand *{
+    display: inline;
+}
+
+.proj{
+    display: table-cell;
+    white-space: nowrap;
+    color: rgb(140, 196, 189);
+    text-shadow:1px 1px 10px rgb(140, 196, 189), 1px 1px 10px #ccc;
+
+}
+
+.projDesp{
+    display: table-cell;
+    white-space: nowrap;
+}
+
+
+.projDesp *{
+    align-items: left;
+    margin-left: auto;
+}
+
+p{
+    font-family: "Courier";
+    margin: 0 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100em;
+    animation: type 1s steps(60, end); 
+
+}
+
+
+.textLine {
+    margin-left: 30px;
+
+}
+
+.textSingleLine {
+    margin-left: 30px;
+    display: inline;
+}
+
+textarea {
+    font-size: 18px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; 
+}
+
+.responseBody{
+    width: 40%;
+    display: table;
+    margin-left: 30px;
+}
+
 .input{
-    color: white;
+    font-family: "Courier";
+    color: rgb(140, 196, 189);
+    text-shadow:1px 1px 10px rgb(140, 196, 189), 1px 1px 10px #ccc;
+
     resize: none;
     height: 20px;
     width: 300px;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     scroll-margin: none;
     overflow: auto;
 }
 
 .line{
     display: inline;
-}
-
-.cmd{
-    white-space: nowrap;
-}
-
-.cmdDesc{
-    white-space: nowrap;
 }

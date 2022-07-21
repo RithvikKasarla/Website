@@ -1,8 +1,44 @@
+var GITHUB = "https://github.com/RithvikKasarla";
+var YOUTUBE = "https://www.youtube.com/channel/UCuDA8LnC0m0ITeM5RfNVY1w";
+var EMAIL = "rithvikrk719@gmail.com";
+function addDisclaimer(text) {
+  var speed = 10;
+  var line = document.createElement("p");
+  line.style.color = "white";
+  line.style.fontSize = "15px";
+  document.body.appendChild(line);
+  setTimeout(() => {
+    var d = document.getElementsByTagName("p");
+    d[d.length - 1].innerHTML = text;
+  }, speed);
+}
+
 window.onload = function (e) {
-  var elem = document.getElementsByClassName("input");
-  elem[0].value = "";
-  elem[0].focus();
-  elem[0].select();
+  // addText(
+  //   `<spam style="color:white;font-size:15px;">Rithvik Kasarla A real and legit Corporation. All writes reserved.<spam>`
+  // );
+  setTimeout(() => addArtLines(art), 20);
+  setTimeout(() => {
+    addText(
+      "Type  <spam class='cmd'>help</spam> to see a list of commands or type <spam class='cmd'>website</spam> to see gui website"
+    );
+  }, 1800);
+
+  setTimeout(() => {
+    let div = document.createElement("div");
+    div.className = "inputframe";
+    document.body.append(div);
+    div.innerHTML = `
+    <div class="inputframe">
+      <p class="text-header">[visitor@RithvikKCo /] </p>
+      <textarea class="input" id="input"><span id="cursor"></span></textarea>
+    </div>`;
+    var elem = document.getElementsByClassName("input");
+
+    elem[0].value = "";
+    elem[0].focus();
+    elem[0].select();
+  }, 2000);
 };
 
 document.addEventListener("keypress", function (e) {
@@ -15,13 +51,62 @@ document.addEventListener("keypress", function (e) {
   }
 });
 
+var Banner = [
+  "  _/_/_/    _/    _/      _/                   _/   _/            _/    _/                                          _/            ",
+  " _/    _/      _/_/_/_/  _/_/_/   _/      _/       _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/   ",
+  "_/_/_/    _/    _/      _/    _/  _/     _/   _/  _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
+  "_/    _/  _/    _/      _/    _/    _/  _/    _/  _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
+  "_/    _/  _/      _/_/  _/    _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
+  "                                                                                                                                  ",
+];
+var oringinalArt = [
+  "              +              /    ",
+  "  \\           |           /      ",
+  "    \\         |         /          _/_/_/    _/    _/      _/                    _/   _/            _/    _/                                          _/            ",
+  "      \\      / \\     /           _/    _/      _/_/_/_/  _/_/_/    _/       _/      _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/   ",
+  "        \\  /_____\\ /            _/_/_/    _/    _/      _/    _/   _/      _/  _/  _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
+  "        /  |__|__|  \\            _/    _/  _/    _/      _/   _/     _/  _/    _/  _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
+  "      /  |;|     |;|  \\          _/    _/  _/      _/_/  _/   _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
+  "    /    \\.    .  /    \\                                                                                                                                          ",
+  "  /       ||:  .  |       \\      ",
+  "          ||:     |         \\    ",
+  "          ||:.    |           \\  ",
+  "          ||:    .|",
+  "          ||:   , |         /`\\",
+  "          ||:     |                                          /`\\",
+  "          ||: _ . |                             /`\\",
+  "         _||_| |__|                      ____",
+  "    ____~    |_|  |___           __-----~    ~`---,__             ___            _----~`---,__             ___",
+  "  -~                  ~---___,--~'                  ~~----_____-~'    ---___,--~'             ~~----_____-~",
+  "  `~----,____                      ",
+];
+
+var art = [
+  "              +              /    ",
+  "  \\           |           /      ",
+  "    \\         |         /         _/_/_/    _/    _/      _/                   _/   _/            _/    _/                                          _/           ",
+  "      \\      / \\     /           _/    _/      _/_/_/_/  _/        _/      _/      _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/  ",
+  "        \\  /_____\\ /             _/_/_/    _/    _/      _/_/_/_/  _/    _/  _/   _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
+  "        /  |__|__|  \\            _/   _/   _/    _/      _/   _/    _/ _/    _/   _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
+  "      /  |;|     |;| \\           _/   _/  _/      _/_/  _/   _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
+  "    /    \\.    .  /   \\                                                                                                                                          ",
+  "  /       ||:  .  |      \\      ",
+  "          ||:     |        \\    ",
+  "          ||:     |                                          /`\\",
+  "          ||: _ . |                             /`\\",
+  "         _||_| |__|       /`\\           ____",
+  "    ____~    |_|  |___           __-----~    ~`---,__             ___            _----~`---,__             ___",
+  "  -~                  ~---___,--~'                  ~~----_____-~'    ---___,--~'             ~~----_____-~",
+  "  `~----,____                      ",
+];
 var commands = [
   "Whois",
   "Projects",
   "Youtube",
   "Github",
   "Email",
-  "History",
+  "Website",
+  "Clear",
   "Help",
 ];
 
@@ -31,7 +116,8 @@ var commandDescriptions = [
   "Youtube Channel",
   "Github Link",
   "To Contact Me",
-  "See Last 7 Commands",
+  "GUI Website",
+  "Refresh page",
   "You know What This Does",
 ];
 
@@ -55,35 +141,100 @@ var projectTechnologies = [
 var passedCommands = [];
 
 function outputs(cmd) {
-  switch (cmd.toLowerCase()) {
+  switch (cmd.toLowerCase().replace(" ", "")) {
     case "whois":
-      addText("I am Rithvik Kasarla.");
+      var text = [
+        "I am Rithvik Kasarla. I am currently a sophmore in Case Western Reserve University and am majoring in Computer Science. ",
+        "I am constantly making new projects, and putting them on my github. Along with this once a project is done I like to ",
+        "document about it on my youtube channe where I go through the code and talk about any problems I encountered while coding it.",
+        "Currently I am interested in many different fields of computer science, full stack development and also machine learning",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
       break;
     case "projects":
       addProjectCommand();
-      setTimeout(
-        () => addNewCommandLine(),
-        getProjectsTime(projects.length - 1)
-      );
       break;
     case "youtube":
+      addText("Sending to Youtube ...");
+      window.open(YOUTUBE, "_blank");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
       break;
     case "github":
+      addText("Sending to Github ...");
+      window.open(GITHUB, "_blank");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
       break;
     case "email":
+      addText("Opening Email ...");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
       break;
-    case "history":
+    case "website":
+      addText("GUI Website in DEV");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
       break;
     case "help":
       addHelpCommand();
       break;
+    case "clear":
+      document.location.reload(true);
+      break;
     default:
-      addText("Not a Command. Type help to find more commands");
+      addTextLine(
+        `Not a Command. Type <span class="cmd">help</span> to find more commands`
+      );
       break;
   }
 }
-
 function addHelpCommand() {
+  var responseBody = document.createElement("div");
+  responseBody.className = "responseBody";
+  document.body.append(responseBody);
+  addNewCommandLine();
+  for (
+    let commandNumber = 0;
+    commandNumber < commands.length;
+    commandNumber++
+  ) {
+    setTimeout(() => {
+      var line = document.createElement("span");
+      line.className = "helpCommand";
+      responseBody.append(line);
+      line.innerHTML = `<div class="cmd" style="display:table-cell">${commands[commandNumber]}</div><div class="cmdDescp">${commandDescriptions[commandNumber]}</div> </div><br>`;
+    }, 100 * commandNumber);
+  }
+}
+
+function addProjectCommand() {
+  var responseBody = document.createElement("div");
+  responseBody.className = "responseBody";
+  document.body.append(responseBody);
+  addNewCommandLine();
+  for (
+    let projectNumber = 0;
+    projectNumber < projects.length;
+    projectNumber++
+  ) {
+    setTimeout(() => {
+      var line = document.createElement("span");
+      line.className = "projectsCommand";
+      responseBody.append(line);
+      line.innerHTML = `<div class="proj">${projects[projectNumber]}</div><div class="projDescp">${projectTechnologies[projectNumber]}</div> </div><br>`;
+    }, 100 * projectNumber);
+  }
+}
+
+function addHelpCommandTry2() {
   var responseBody = document.createElement("div");
   responseBody.className = "responseBody";
   document.body.append(responseBody);
@@ -105,7 +256,7 @@ function addHelpCommand() {
           var char = 0;
           char <
           Math.max(
-            commands[commandNumber].length,
+            projects[commandNumber].length,
             commandDescriptions[commandNumber].length
           );
           char++
@@ -114,11 +265,11 @@ function addHelpCommand() {
             (char, commandNumber, cmd) => {
               console.log(projects[commandNumber]);
               console.log(char);
-              if (char < commands[commandNumber].length) {
-                cmd[cmd.length - 1].innerHTML += commands[commandNumber][char];
+              if (char < projects[commandNumber].length) {
+                cmd[cmd.length - 1].innerHTML += projects[commandNumber][char];
               }
             },
-            char * 30,
+            char * 20,
             char,
             commandNumber,
             cmd
@@ -130,20 +281,20 @@ function addHelpCommand() {
                   commandDescriptions[commandNumber][char];
               }
             },
-            char * 20,
+            char * 10,
             char,
             commandNumber,
             cmdDescp
           );
         }
       },
-      commandNumber * 500,
+      commandNumber * 300,
       commandNumber
     );
   }
 }
 
-function addProjectCommand() {
+function addProjectCommandtry2() {
   var responseBody = document.createElement("div");
   responseBody.className = "responseBody";
   document.body.append(responseBody);
@@ -178,7 +329,7 @@ function addProjectCommand() {
                 cmd[cmd.length - 1].innerHTML += projects[projectNumber][char];
               }
             },
-            char * 10,
+            char * 8,
             char,
             projectNumber,
             proj
@@ -190,14 +341,14 @@ function addProjectCommand() {
                   projectTechnologies[projectNumber][char];
               }
             },
-            char * 20,
+            char * 10,
             char,
             projectNumber,
             projDescp
           );
         }
       },
-      projectNumber * 500,
+      projectNumber * 300,
       projectNumber
     );
   }
@@ -212,19 +363,83 @@ function getHelpTime(cmd) {
   }
   return sum;
 }
-function addText(text) {
-  var speed = 40;
-  var div = document.createElement("div");
-  document.body.appendChild(div);
-  for (let char = 0; char < text.length; char++) {
-    setTimeout(() => {
-      var d = document.getElementsByTagName("div");
-      d[d.length - 1].innerHTML += text[char];
-    }, char * speed);
-  }
+function addTextLine(text) {
+  var speed = 10;
+  var line = document.createElement("p");
+  line.className = "textSingleLine";
+  document.body.appendChild(line);
+  setTimeout(() => {
+    line.innerHTML = text;
+  }, speed);
+
   setTimeout(() => {
     addNewCommandLine();
-  }, text.length * speed + 1);
+  }, text.length + 1);
+}
+
+function addText(text, linenum) {
+  var speed = 10;
+  var line = document.createElement("p");
+  line.className = "textLine";
+  document.body.appendChild(line);
+  setTimeout(() => {
+    var d = document.getElementsByTagName("p");
+    d[d.length - 1].innerHTML = text;
+  }, speed * linenum);
+}
+
+function lineTime(lines, lineNum) {
+  var time = 1;
+  for (var line = 0; line < lineNum; line++) {
+    time += lines[line].length * 3;
+  }
+  return time;
+}
+
+function projectTime(lines, lineNum) {
+  var time = 1;
+  for (var line = 0; line < lineNum; line++) {
+    time += lines[line].length * 3;
+  }
+  return time;
+}
+
+function addArtLines(lines) {
+  var artHolder = document.createElement("div");
+  artHolder.className = "art-holder";
+  document.body.appendChild(artHolder);
+  for (var line = 0; line < lines.length; line++) {
+    setTimeout(
+      (line) => {
+        addArt(lines[line], line, artHolder);
+      },
+      line * 90,
+      line
+    );
+  }
+}
+
+function addArt(text, linenum, parent) {
+  var speed = 5;
+  var line = document.createElement("p");
+  line.className = "ascii-art";
+  parent.append(line);
+  setTimeout(() => {
+    var d = document.getElementsByClassName("ascii-art");
+    d[d.length - 1].innerHTML = text;
+  }, speed * linenum);
+}
+
+function addLines(lines) {
+  for (var line = 0; line < lines.length; line++) {
+    setTimeout(
+      (line) => {
+        addText(lines[line], line);
+      },
+      line * 200,
+      line
+    );
+  }
 }
 
 function addNewCommandLine() {
