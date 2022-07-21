@@ -122,12 +122,12 @@ var commandDescriptions = [
 ];
 
 var projects = [
-  "Terminal Website",
-  "Url Shortener",
-  "Sorting Algorithm Visualizer",
-  "Comment Anywhere app",
-  "Article Summarizer",
-  "Water Quality Predictor",
+  "(1) Terminal Website",
+  "(2) Url Shortener",
+  "(3) Sorting Algorithm Visualizer",
+  "(4) Comment Anywhere app",
+  "(5) Article Summarizer",
+  "(6) Water Quality Predictor",
 ];
 
 var projectTechnologies = [
@@ -142,6 +142,67 @@ var passedCommands = [];
 
 function outputs(cmd) {
   switch (cmd.toLowerCase().replace(" ", "")) {
+    case "project1":
+      var text = [
+        "<h3>Terminal Website</h3>",
+        "A Personal Website designed like a terminal. It is designed with basic HTML, CSS,",
+        "and JS. The inspiration for this design was my use of linux as my main operating system.	",
+      ];
+
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "project2":
+      var text = [
+        "<h3>Url Shortener</h3>",
+        "A website which can allow you to shorten long urls to a key of your choice. You",
+        "could also search through any of the existing shortened URLs and their long URL",
+        "counterparts to see any that already exist.",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+
+    case "project3":
+      var text = [
+        "<h3>Sorting Algorithm Visualizer</h3>",
+        "A Website using ReactJs to show the user a visual representation of many",
+        "sorting algorithms: Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, Selection Sort",
+        "Code: <a href='https://github.com/RithvikKasarla/sorting-visualizer'>https://github.com/RithvikKasarla/sorting-visualizer</a>",
+        "Published: <a href=https://rithvikkasarla.github.io/sorting-visualizer/>https://rithvikkasarla.github.io/sorting-visualizer/</a>",
+        "Youtube Video:<a href= https://www.youtube.com/watch?v=ldOwCBbZcIM>https://www.youtube.com/watch?v=ldOwCBbZcIM</a>",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "project4":
+      var text = [
+        "<h3>Comment Anywhere App</h3>",
+        "A chrome extension	that allows the user to comment on any website and also see",
+        "other users comments.",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "project5":
+      var text = [
+        "<h3>Water Quality Predictor</h3>",
+        "	A program using Sklearn which uses past chemical composition data of water in",
+        "california and predicts the chemical composition into the future using forecasting.",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
     case "whois":
       var text = [
         "I am Rithvik Kasarla. I am currently a sophmore in Case Western Reserve University and am majoring in Computer Science. ",
@@ -155,7 +216,10 @@ function outputs(cmd) {
       }, lineTime(text, text.length));
       break;
     case "projects":
-      addProjectCommand();
+      addText("Type Project Followed by number to learn more");
+      setTimeout(() => {
+        addProjectCommand();
+      }, 30);
       break;
     case "youtube":
       addText("Sending to Youtube ...");
@@ -450,6 +514,11 @@ function addNewCommandLine() {
   var ta = document.getElementsByTagName("textarea");
   ta[ta.length - 1].select();
 }
+
+window.setInterval(function () {
+  var elem = document.getElementById("textarea");
+  elem[elem.length - 1].scrollTop = elem.scrollHeight;
+}, 50);
 
 function addSpecialProjectsCommandList() {
   var span = document.createElement("span");
