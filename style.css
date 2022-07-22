@@ -113,8 +113,9 @@ p{
     display: inline;
 }
 
-textarea {
-    font-size: 18px;
+input {
+    margin-bottom: 10px;
+    font-size: 19px;
     border: none;
     overflow: auto;
     outline: none;
@@ -122,8 +123,6 @@ textarea {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-
-    resize: none; 
 }
 
 .responseBody{

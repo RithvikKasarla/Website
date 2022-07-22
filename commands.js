@@ -1,22 +1,18 @@
-var GITHUB = "https://github.com/RithvikKasarla";
-var YOUTUBE = "https://www.youtube.com/channel/UCuDA8LnC0m0ITeM5RfNVY1w";
-var EMAIL = "rithvikrk719@gmail.com";
+var loc = -1;
+
 function addDisclaimer(text) {
   var speed = 10;
   var line = document.createElement("p");
   line.style.color = "white";
   line.style.fontSize = "15px";
   document.body.appendChild(line);
-  setTimeout(() => {
+  setTimeout(() => {website
     var d = document.getElementsByTagName("p");
     d[d.length - 1].innerHTML = text;
   }, speed);
 }
 
 window.onload = function (e) {
-  // addText(
-  //   `<spam style="color:white;font-size:15px;">Rithvik Kasarla A real and legit Corporation. All writes reserved.<spam>`
-  // );
   setTimeout(() => addArtLines(art), 20);
   setTimeout(() => {
     addText(
@@ -31,7 +27,7 @@ window.onload = function (e) {
     div.innerHTML = `
     <div class="inputframe">
       <p class="text-header">[visitor@RithvikKCo /] </p>
-      <textarea class="input" id="input"><span id="cursor"></span></textarea>
+      <input class="input" id="input"><span id="cursor"></span></inout>
     </div>`;
     var elem = document.getElementsByClassName("input");
 
@@ -41,225 +37,54 @@ window.onload = function (e) {
   }, 2000);
 };
 
-document.addEventListener("keypress", function (e) {
+document.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
+    loc = 0;
     var elem = document.getElementsByClassName("input");
     if (elem[elem.length - 1].readOnly == false) {
       elem[elem.length - 1].readOnly = "true";
       outputs(elem[elem.length - 1].value);
     }
+    console.log(passedCommands);
   }
+  if (e.key == "ArrowUp") {
+    console.log(loc)
+    console.log(passedCommands.length)
+    if (loc < passedCommands.length && passedCommands.length >0) {
+      var elem = document.getElementsByClassName("input");
+      var text = passedCommands[loc];
+      if(text == null){
+        if(loc == 0){
+          text = ""
+        }else{
+          loc--;
+          text = passedCommands[loc];
+ 
+        }
+      }
+      elem[elem.length - 1].value = text;
+      loc++;
+    }
+  }
+  else if(e.key == "ArrowDown"){
+    if (loc >= 0) {
+      console.log(loc)
+    
+      var elem = document.getElementsByClassName("input");
+      var text = passedCommands[loc];
+      if(text == null){
+        text = "";
+      }
+      elem[elem.length - 1].value = text;
+      loc--;
+      
+    }
+  }
+  else{loc =0}
 });
 
-var Banner = [
-  "  _/_/_/    _/    _/      _/                   _/   _/            _/    _/                                          _/            ",
-  " _/    _/      _/_/_/_/  _/_/_/   _/      _/       _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/   ",
-  "_/_/_/    _/    _/      _/    _/  _/     _/   _/  _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
-  "_/    _/  _/    _/      _/    _/    _/  _/    _/  _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
-  "_/    _/  _/      _/_/  _/    _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
-  "                                                                                                                                  ",
-];
-var oringinalArt = [
-  "              +              /    ",
-  "  \\           |           /      ",
-  "    \\         |         /          _/_/_/    _/    _/      _/                    _/   _/            _/    _/                                          _/            ",
-  "      \\      / \\     /           _/    _/      _/_/_/_/  _/_/_/    _/       _/      _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/   ",
-  "        \\  /_____\\ /            _/_/_/    _/    _/      _/    _/   _/      _/  _/  _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
-  "        /  |__|__|  \\            _/    _/  _/    _/      _/   _/     _/  _/    _/  _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
-  "      /  |;|     |;|  \\          _/    _/  _/      _/_/  _/   _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
-  "    /    \\.    .  /    \\                                                                                                                                          ",
-  "  /       ||:  .  |       \\      ",
-  "          ||:     |         \\    ",
-  "          ||:.    |           \\  ",
-  "          ||:    .|",
-  "          ||:   , |         /`\\",
-  "          ||:     |                                          /`\\",
-  "          ||: _ . |                             /`\\",
-  "         _||_| |__|                      ____",
-  "    ____~    |_|  |___           __-----~    ~`---,__             ___            _----~`---,__             ___",
-  "  -~                  ~---___,--~'                  ~~----_____-~'    ---___,--~'             ~~----_____-~",
-  "  `~----,____                      ",
-];
-
-var art = [
-  "              +              /    ",
-  "  \\           |           /      ",
-  "    \\         |         /         _/_/_/    _/    _/      _/                   _/   _/            _/    _/                                          _/           ",
-  "      \\      / \\     /           _/    _/      _/_/_/_/  _/        _/      _/      _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/  ",
-  "        \\  /_____\\ /             _/_/_/    _/    _/      _/_/_/_/  _/    _/  _/   _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
-  "        /  |__|__|  \\            _/   _/   _/    _/      _/   _/    _/ _/    _/   _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
-  "      /  |;|     |;| \\           _/   _/  _/      _/_/  _/   _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
-  "    /    \\.    .  /   \\                                                                                                                                          ",
-  "  /       ||:  .  |      \\      ",
-  "          ||:     |        \\    ",
-  "          ||:     |                                          /`\\",
-  "          ||: _ . |                             /`\\",
-  "         _||_| |__|       /`\\           ____",
-  "    ____~    |_|  |___           __-----~    ~`---,__             ___            _----~`---,__             ___",
-  "  -~                  ~---___,--~'                  ~~----_____-~'    ---___,--~'             ~~----_____-~",
-  "  `~----,____                      ",
-];
-var commands = [
-  "Whois",
-  "Projects",
-  "Youtube",
-  "Github",
-  "Email",
-  "Website",
-  "Clear",
-  "Help",
-];
-
-var commandDescriptions = [
-  "Who is Rithvik Kasarla",
-  "Coding Projects Done",
-  "Youtube Channel",
-  "Github Link",
-  "To Contact Me",
-  "GUI Website",
-  "Refresh page",
-  "You know What This Does",
-];
-
-var projects = [
-  "(1) Terminal Website",
-  "(2) Url Shortener",
-  "(3) Sorting Algorithm Visualizer",
-  "(4) Comment Anywhere app",
-  "(5) Article Summarizer",
-  "(6) Water Quality Predictor",
-];
-
-var projectTechnologies = [
-  "Html, CSS, Javascript",
-  "ReactJs, NodeJs, MongoDB",
-  "ReactJs",
-  "ReactJs, Python(Flask)",
-  "NodeJs, Python(Flask)",
-  "Python(Sklearn,Numpy,Pandas, Matplolib)",
-];
 var passedCommands = [];
 
-function outputs(cmd) {
-  switch (cmd.toLowerCase().replace(" ", "")) {
-    case "project1":
-      var text = [
-        "<h3>Terminal Website</h3>",
-        "A Personal Website designed like a terminal. It is designed with basic HTML, CSS,",
-        "and JS. The inspiration for this design was my use of linux as my main operating system.	",
-      ];
-
-      addLines(text);
-      setTimeout(() => {
-        addNewCommandLine();
-      }, lineTime(text, text.length));
-      break;
-    case "project2":
-      var text = [
-        "<h3>Url Shortener</h3>",
-        "A website which can allow you to shorten long urls to a key of your choice. You",
-        "could also search through any of the existing shortened URLs and their long URL",
-        "counterparts to see any that already exist.",
-      ];
-      addLines(text);
-      setTimeout(() => {
-        addNewCommandLine();
-      }, lineTime(text, text.length));
-      break;
-
-    case "project3":
-      var text = [
-        "<h3>Sorting Algorithm Visualizer</h3>",
-        "A Website using ReactJs to show the user a visual representation of many",
-        "sorting algorithms: Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, Selection Sort",
-        "Code: <a href='https://github.com/RithvikKasarla/sorting-visualizer'>https://github.com/RithvikKasarla/sorting-visualizer</a>",
-        "Published: <a href=https://rithvikkasarla.github.io/sorting-visualizer/>https://rithvikkasarla.github.io/sorting-visualizer/</a>",
-        "Youtube Video:<a href= https://www.youtube.com/watch?v=ldOwCBbZcIM>https://www.youtube.com/watch?v=ldOwCBbZcIM</a>",
-      ];
-      addLines(text);
-      setTimeout(() => {
-        addNewCommandLine();
-      }, lineTime(text, text.length));
-      break;
-    case "project4":
-      var text = [
-        "<h3>Comment Anywhere App</h3>",
-        "A chrome extension	that allows the user to comment on any website and also see",
-        "other users comments.",
-      ];
-      addLines(text);
-      setTimeout(() => {
-        addNewCommandLine();
-      }, lineTime(text, text.length));
-      break;
-    case "project5":
-      var text = [
-        "<h3>Water Quality Predictor</h3>",
-        "	A program using Sklearn which uses past chemical composition data of water in",
-        "california and predicts the chemical composition into the future using forecasting.",
-      ];
-      addLines(text);
-      setTimeout(() => {
-        addNewCommandLine();
-      }, lineTime(text, text.length));
-      break;
-    case "whois":
-      var text = [
-        "I am Rithvik Kasarla. I am currently a sophmore in Case Western Reserve University and am majoring in Computer Science. ",
-        "I am constantly making new projects, and putting them on my github. Along with this once a project is done I like to ",
-        "document about it on my youtube channe where I go through the code and talk about any problems I encountered while coding it.",
-        "Currently I am interested in many different fields of computer science, full stack development and also machine learning",
-      ];
-      addLines(text);
-      setTimeout(() => {
-        addNewCommandLine();
-      }, lineTime(text, text.length));
-      break;
-    case "projects":
-      addText("Type Project Followed by number to learn more");
-      setTimeout(() => {
-        addProjectCommand();
-      }, 30);
-      break;
-    case "youtube":
-      addText("Sending to Youtube ...");
-      window.open(YOUTUBE, "_blank");
-      setTimeout(() => {
-        addNewCommandLine();
-      }, 10);
-      break;
-    case "github":
-      addText("Sending to Github ...");
-      window.open(GITHUB, "_blank");
-      setTimeout(() => {
-        addNewCommandLine();
-      }, 10);
-      break;
-    case "email":
-      addText("Opening Email ...");
-      setTimeout(() => {
-        addNewCommandLine();
-      }, 10);
-      break;
-    case "website":
-      addText("GUI Website in DEV");
-      setTimeout(() => {
-        addNewCommandLine();
-      }, 10);
-      break;
-    case "help":
-      addHelpCommand();
-      break;
-    case "clear":
-      document.location.reload(true);
-      break;
-    default:
-      addTextLine(
-        `Not a Command. Type <span class="cmd">help</span> to find more commands`
-      );
-      break;
-  }
-}
 function addHelpCommand() {
   var responseBody = document.createElement("div");
   responseBody.className = "responseBody";
@@ -295,126 +120,6 @@ function addProjectCommand() {
       responseBody.append(line);
       line.innerHTML = `<div class="proj">${projects[projectNumber]}</div><div class="projDescp">${projectTechnologies[projectNumber]}</div> </div><br>`;
     }, 100 * projectNumber);
-  }
-}
-
-function addHelpCommandTry2() {
-  var responseBody = document.createElement("div");
-  responseBody.className = "responseBody";
-  document.body.append(responseBody);
-  addNewCommandLine();
-  for (
-    let commandNumber = 0;
-    commandNumber < projects.length;
-    commandNumber++
-  ) {
-    setTimeout(
-      (commandNumber) => {
-        var line = document.createElement("span");
-        line.className = "line";
-        line.innerHTML = `<div class="cmd"></div>  <div class="cmdDescp"></div> </div><br>`;
-        responseBody.append(line);
-        var cmd = document.getElementsByClassName("cmd");
-        var cmdDescp = document.getElementsByClassName("cmdDescp");
-        for (
-          var char = 0;
-          char <
-          Math.max(
-            projects[commandNumber].length,
-            commandDescriptions[commandNumber].length
-          );
-          char++
-        ) {
-          setTimeout(
-            (char, commandNumber, cmd) => {
-              console.log(projects[commandNumber]);
-              console.log(char);
-              if (char < projects[commandNumber].length) {
-                cmd[cmd.length - 1].innerHTML += projects[commandNumber][char];
-              }
-            },
-            char * 20,
-            char,
-            commandNumber,
-            cmd
-          );
-          setTimeout(
-            (char, commandNumber, cmd) => {
-              if (char < commandDescriptions[commandNumber].length) {
-                cmdDescp[cmdDescp.length - 1].innerHTML +=
-                  commandDescriptions[commandNumber][char];
-              }
-            },
-            char * 10,
-            char,
-            commandNumber,
-            cmdDescp
-          );
-        }
-      },
-      commandNumber * 300,
-      commandNumber
-    );
-  }
-}
-
-function addProjectCommandtry2() {
-  var responseBody = document.createElement("div");
-  responseBody.className = "responseBody";
-  document.body.append(responseBody);
-  addNewCommandLine();
-  for (
-    let projectNumber = 0;
-    projectNumber < projects.length;
-    projectNumber++
-  ) {
-    setTimeout(
-      (projectNumber) => {
-        var line = document.createElement("span");
-        line.className = "line";
-        line.innerHTML = `<div class="proj"></div>  <div class="projDescp"></div> </div><br>`;
-        responseBody.append(line);
-        var proj = document.getElementsByClassName("proj");
-        var projDescp = document.getElementsByClassName("projDescp");
-        for (
-          var char = 0;
-          char <
-          Math.max(
-            projects[projectNumber].length,
-            projectTechnologies[projectNumber].length
-          );
-          char++
-        ) {
-          setTimeout(
-            (char, projectNumber, cmd) => {
-              console.log(projects[projectNumber]);
-              console.log(char);
-              if (char < projects[projectNumber].length) {
-                cmd[cmd.length - 1].innerHTML += projects[projectNumber][char];
-              }
-            },
-            char * 8,
-            char,
-            projectNumber,
-            proj
-          );
-          setTimeout(
-            (char, projectNumber, cmd) => {
-              if (char < projectTechnologies[projectNumber].length) {
-                projDescp[projDescp.length - 1].innerHTML +=
-                  projectTechnologies[projectNumber][char];
-              }
-            },
-            char * 10,
-            char,
-            projectNumber,
-            projDescp
-          );
-        }
-      },
-      projectNumber * 300,
-      projectNumber
-    );
   }
 }
 
@@ -509,22 +214,167 @@ function addLines(lines) {
 function addNewCommandLine() {
   var span = document.createElement("span");
   span.innerHTML =
-    '<div class="inputframe"><p class="text-header">[visitor@RithvikKCo /] </p><textarea class="input" id="input"></textarea></div>';
+    '<div class="inputframe"><p class="text-header">[visitor@RithvikKCo /] </p><input class="input" id="input"></input></div>';
   document.body.appendChild(span);
-  var ta = document.getElementsByTagName("textarea");
+  var ta = document.getElementsByTagName("input");
   ta[ta.length - 1].select();
 }
-
-window.setInterval(function () {
-  var elem = document.getElementById("textarea");
-  elem[elem.length - 1].scrollTop = elem.scrollHeight;
-}, 50);
 
 function addSpecialProjectsCommandList() {
   var span = document.createElement("span");
   span.innerHTML =
-    '<div class="inputframe"><p class="text-header">[visitor@RithvikKCo /Projects] </p><textarea class="input" id="input"></textarea></div>';
+    '<div class="inputframe"><p class="text-header">[visitor@RithvikKCo /Projects] </p><input class="input" id="input"></input></div>';
   document.body.appendChild(span);
-  var ta = document.getElementsByTagName("textarea");
+  var ta = document.getElementsByTagName("input");
   ta[ta.length - 1].select();
+}
+
+
+
+
+function outputs(cmd) {
+  switch (cmd.toLowerCase().replace(" ", "")) {
+    case "project1":
+      passedCommands.unshift(cmd);
+
+      var text = [
+        "<h3>Terminal Website</h3>",
+        "A Personal Website designed like a terminal. It is designed with basic HTML, CSS,",
+        "and JS. The inspiration for this design was my use of linux as my main operating system.	",
+      ];
+
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "project2":
+      passedCommands.unshift(cmd);
+      var text = [
+        "<h3>Url Shortener</h3>",
+        "A website which can allow you to shorten long urls to a key of your choice. You",
+        "could also search through any of the existing shortened URLs and their long URL",
+        "counterparts to see any that already exist.",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+
+    case "project3":
+      passedCommands.unshift(cmd);
+      var text = [
+        "<h3>Sorting Algorithm Visualizer</h3>",
+        "A Website using ReactJs to show the user a visual representation of many",
+        "sorting algorithms: Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, Selection Sort",
+        "Code: <a href='https://github.com/RithvikKasarla/sorting-visualizer'>https://github.com/RithvikKasarla/sorting-visualizer</a>",
+        "Published: <a href=https://rithvikkasarla.github.io/sorting-visualizer/>https://rithvikkasarla.github.io/sorting-visualizer/</a>",
+        "Youtube Video:<a href= https://www.youtube.com/watch?v=ldOwCBbZcIM>https://www.youtube.com/watch?v=ldOwCBbZcIM</a>",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "project4":
+      passedCommands.unshift(cmd);
+      var text = [
+        "<h3>Comment Anywhere App</h3>",
+        "A chrome extension	that allows the user to comment on any website and also see",
+        "other users comments."
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length) + 90);
+      break;
+    case "project5":
+      passedCommands.unshift(cmd);
+      var text = [
+        "<h3>Article Summarizer</h3>",
+        "A chrome extension using NLP, Natural Language Processing, in order to",
+        "summarize an article that the user is currently on."
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length)) + 50;
+      break;
+    case "project6":
+      passedCommands.unshift(cmd);
+      var text = [
+        "<h3>Water Quality Predictor</h3>",
+        "	A program using Sklearn which uses past chemical composition data of water in",
+        "california and predicts the chemical composition into the future using forecasting.",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "whois":
+      passedCommands.unshift(cmd);
+      var text = [
+        "I am Rithvik Kasarla. I am currently a sophmore in Case Western Reserve University and am majoring in Computer Science. ",
+        "I am constantly making new projects, and putting them on my github. Along with this once a project is done I like to ",
+        "document about it on my youtube channe where I go through the code and talk about any problems I encountered while coding it.",
+        "Currently I am interested in many different fields of computer science, full stack development and also machine learning",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "projects":
+      passedCommands.unshift(cmd);
+      addText("Type Project Followed by number to learn more");
+      setTimeout(() => {
+        addProjectCommand();
+      }, 30);
+      break;
+    case "youtube":
+      passedCommands.unshift(cmd);
+      addText("Sending to Youtube ...");
+      window.open(YOUTUBE, "_blank");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
+      break;
+    case "github":
+      passedCommands.unshift(cmd);
+      addText("Sending to Github ...");
+      window.open(GITHUB, "_blank");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
+      break;
+    case "email":
+      passedCommands.unshift(cmd);
+      addText("Opening Email ...");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
+      break;
+    case "website":
+      passedCommands.unshift(cmd);
+      addText("GUI Website in DEV");
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
+      break;
+    case "help":
+      passedCommands.unshift(cmd);
+      addHelpCommand();
+      break;
+    case "clear":
+      passedCommands.unshift(cmd);
+      document.location.reload(true);
+      break;
+    default:
+      addTextLine(
+        `Not a Command. Type <span class="cmd">help</span> to find more commands`
+      );
+      break;
+  }
 }
