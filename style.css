@@ -135,7 +135,6 @@ input {
     font-family: "Courier";
     color: rgb(140, 196, 189);
     text-shadow:1px 1px 10px rgb(140, 196, 189), 1px 1px 10px #ccc;
-
     resize: none;
     height: 20px;
     width: 300px;

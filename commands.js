@@ -1,17 +1,5 @@
 var loc = -1;
 
-function addDisclaimer(text) {
-  var speed = 10;
-  var line = document.createElement("p");
-  line.style.color = "white";
-  line.style.fontSize = "15px";
-  document.body.appendChild(line);
-  setTimeout(() => {website
-    var d = document.getElementsByTagName("p");
-    d[d.length - 1].innerHTML = text;
-  }, speed);
-}
-
 window.onload = function (e) {
   setTimeout(() => addArtLines(art), 20);
   setTimeout(() => {
@@ -27,7 +15,7 @@ window.onload = function (e) {
     div.innerHTML = `
     <div class="inputframe">
       <p class="text-header">[visitor@RithvikKCo /] </p>
-      <input class="input" id="input"><span id="cursor"></span></inout>
+      <input class="input" id="input"><span id="cursor"></span></input>
     </div>`;
     var elem = document.getElementsByClassName("input");
 
@@ -48,39 +36,37 @@ document.addEventListener("keydown", function (e) {
     console.log(passedCommands);
   }
   if (e.key == "ArrowUp") {
-    console.log(loc)
-    console.log(passedCommands.length)
-    if (loc < passedCommands.length && passedCommands.length >0) {
+    console.log(loc);
+    console.log(passedCommands.length);
+    if (loc < passedCommands.length && passedCommands.length > 0) {
       var elem = document.getElementsByClassName("input");
       var text = passedCommands[loc];
-      if(text == null){
-        if(loc == 0){
-          text = ""
-        }else{
+      if (text == null) {
+        if (loc == 0) {
+          text = "";
+        } else {
           loc--;
           text = passedCommands[loc];
- 
         }
       }
       elem[elem.length - 1].value = text;
       loc++;
     }
-  }
-  else if(e.key == "ArrowDown"){
+  } else if (e.key == "ArrowDown") {
     if (loc >= 0) {
-      console.log(loc)
-    
+      console.log(loc);
+
       var elem = document.getElementsByClassName("input");
       var text = passedCommands[loc];
-      if(text == null){
+      if (text == null) {
         text = "";
       }
       elem[elem.length - 1].value = text;
       loc--;
-      
     }
+  } else {
+    loc = 0;
   }
-  else{loc =0}
 });
 
 var passedCommands = [];
@@ -123,29 +109,9 @@ function addProjectCommand() {
   }
 }
 
-function getHelpTime(cmd) {
-  var sum = 0;
-
-  for (let x = cmd; x > 0; x--) {
-    sum += 40 * projectTechnologies[x].length;
-    console.log(`${cmd}  ${sum}  ${projectTechnologies[x]}`);
-  }
-  return sum;
-}
-function addTextLine(text) {
-  var speed = 10;
-  var line = document.createElement("p");
-  line.className = "textSingleLine";
-  document.body.appendChild(line);
-  setTimeout(() => {
-    line.innerHTML = text;
-  }, speed);
-
-  setTimeout(() => {
-    addNewCommandLine();
-  }, text.length + 1);
-}
-
+/*
+  Adds one line of text
+*/
 function addText(text, linenum) {
   var speed = 10;
   var line = document.createElement("p");
@@ -157,6 +123,10 @@ function addText(text, linenum) {
   }, speed * linenum);
 }
 
+/*
+  A rough calculation of the amounf of time it would take for a line to be animated out.
+*/
+
 function lineTime(lines, lineNum) {
   var time = 1;
   for (var line = 0; line < lineNum; line++) {
@@ -165,14 +135,9 @@ function lineTime(lines, lineNum) {
   return time;
 }
 
-function projectTime(lines, lineNum) {
-  var time = 1;
-  for (var line = 0; line < lineNum; line++) {
-    time += lines[line].length * 3;
-  }
-  return time;
-}
-
+/*
+  Goes though the ascii art's lines and sends them to the AddArt function
+*/
 function addArtLines(lines) {
   var artHolder = document.createElement("div");
   artHolder.className = "art-holder";
@@ -188,6 +153,10 @@ function addArtLines(lines) {
   }
 }
 
+/* 
+  adds 1 line of the ascii art
+*/
+
 function addArt(text, linenum, parent) {
   var speed = 5;
   var line = document.createElement("p");
@@ -198,6 +167,14 @@ function addArt(text, linenum, parent) {
     d[d.length - 1].innerHTML = text;
   }, speed * linenum);
 }
+
+/**
+ *
+ * @param {*} lines an array of lines
+ *
+ * Goes through each line and calls the addText which adds a line to the dom
+ *
+ */
 
 function addLines(lines) {
   for (var line = 0; line < lines.length; line++) {
@@ -211,6 +188,10 @@ function addLines(lines) {
   }
 }
 
+/*
+  Adds a Command Line
+*/
+
 function addNewCommandLine() {
   var span = document.createElement("span");
   span.innerHTML =
@@ -218,20 +199,20 @@ function addNewCommandLine() {
   document.body.appendChild(span);
   var ta = document.getElementsByTagName("input");
   ta[ta.length - 1].select();
+  ta[ta.length - 1].focus();
 }
 
-function addSpecialProjectsCommandList() {
-  var span = document.createElement("span");
-  span.innerHTML =
-    '<div class="inputframe"><p class="text-header">[visitor@RithvikKCo /Projects] </p><input class="input" id="input"></input></div>';
-  document.body.appendChild(span);
+/*
+  Autoscroll to bottom
+*/
+window.setInterval(() => {
   var ta = document.getElementsByTagName("input");
-  ta[ta.length - 1].select();
-}
+  ta[ta.length - 1].scrollIntoView();
+}, 100);
 
-
-
-
+/*
+  Switch Statement for the outputs of every command
+*/
 function outputs(cmd) {
   switch (cmd.toLowerCase().replace(" ", "")) {
     case "project1":
@@ -282,7 +263,7 @@ function outputs(cmd) {
       var text = [
         "<h3>Comment Anywhere App</h3>",
         "A chrome extension	that allows the user to comment on any website and also see",
-        "other users comments."
+        "other users comments.",
       ];
       addLines(text);
       setTimeout(() => {
@@ -294,7 +275,7 @@ function outputs(cmd) {
       var text = [
         "<h3>Article Summarizer</h3>",
         "A chrome extension using NLP, Natural Language Processing, in order to",
-        "summarize an article that the user is currently on."
+        "summarize an article that the user is currently on.",
       ];
       addLines(text);
       setTimeout(() => {
@@ -372,9 +353,12 @@ function outputs(cmd) {
       document.location.reload(true);
       break;
     default:
-      addTextLine(
+      addText(
         `Not a Command. Type <span class="cmd">help</span> to find more commands`
       );
+      setTimeout(() => {
+        addNewCommandLine();
+      }, 10);
       break;
   }
 }
