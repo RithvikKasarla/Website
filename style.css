@@ -2,6 +2,7 @@
     background-color: rgb(20, 20, 20);
     color: #a9d39e;
     font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @keyframes type{ 
@@ -26,7 +27,6 @@
 
 .helpCommand{
     display: table-row;
-    font-family: "Courier";
     margin: 10px 0 0 10px;
     font-size: 18px;
     white-space: nowrap;
@@ -62,7 +62,6 @@
 .projectsCommand{
     
     display: table-row;
-    font-family: "Courier";
     font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
@@ -93,7 +92,6 @@
 }
 
 p{
-    font-family: "Courier";
     margin: 0 0 0 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -114,6 +112,7 @@ p{
 }
 
 input {
+    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 10px;
     font-size: 19px;
     border: none;
@@ -131,8 +130,14 @@ input {
     margin-left: 30px;
 }
 
+a{
+    display: inline;
+    white-space: nowrap;
+    color: rgb(140, 196, 189);
+    text-shadow:1px 1px 10px rgb(140, 196, 189), 1px 1px 10px #ccc;
+}
+
 .input{
-    font-family: "Courier";
     color: rgb(140, 196, 189);
     text-shadow:1px 1px 10px rgb(140, 196, 189), 1px 1px 10px #ccc;
     resize: none;
