@@ -226,7 +226,10 @@ function outputs(cmd) {
         "-> Created a frontend using HTML, CSS, and JavaScript",
         "-> Deployed on an AWS s3 bucket",
         "-> Domain was created from AWS route53",
-        "Tech: HTML, CSS, JavaScript, AWS Route53, AWS s3 buckets",
+        "Tech: HTML, CSS, JavaScript, AWS Route53, AWS s3 buckets, AWS EC2, Nginx",
+        "Code:<a href='https://github.com/RithvikKasarla/Website' target='_blank'>https://github.com/RithvikKasarla/Website</a>",
+        "Published EC2: <a href='http://rithvik-dev.com' target='_blank'>http://rithvik-dev.com</a>",
+        "Published S3: <a href='http://rithvik-dev.com.s3-website-us-east-1.amazonaws.com' target='_blank'>http://rithvik-dev.com.s3-website-us-east-1.amazonaws.com</a>",
       ];
 
       addLines(text);
@@ -244,6 +247,8 @@ function outputs(cmd) {
         "-> Designed and built a Rest API using ExpressJs as backend and Mongo DB database",
         "-> Deployed on an AWS EC2 Instance with a Nginx webserver ",
         "Tech: ReactJs, Rest API, ExpressJs, Tailwind CSS, Mongo DB, AWS EC2, Nginx ",
+        "Code <a href='https://github.com/RithvikKasarla/UrlShortener' target='_blank'>https://github.com/RithvikKasarla/UrlShortener</a>",
+        "Published: <a href='http://rithvik-dev.com/urls' target='_blank'>http://rithvik-dev.com</a>",
       ];
       addLines(text);
       setTimeout(() => {
@@ -260,9 +265,9 @@ function outputs(cmd) {
         "-> Created a frontend using ReactJS and CSS",
         "-> Utilized CSS to dynamically create the height of bars",
         "-> Coded Sorting Algorithms in JavaScript",
-        "Code: <a href='https://github.com/RithvikKasarla/sorting-visualizer'>https://github.com/RithvikKasarla/sorting-visualizer</a>",
-        "Published: <a href=https://rithvikkasarla.github.io/sorting-visualizer/>https://rithvikkasarla.github.io/sorting-visualizer/</a>",
-        "Youtube Video:<a href= https://www.youtube.com/watch?v=ldOwCBbZcIM>https://www.youtube.com/watch?v=ldOwCBbZcIM</a>",
+        "Code: <a href='https://github.com/RithvikKasarla/sorting-visualizer' target='_blank'>https://github.com/RithvikKasarla/sorting-visualizer</a>",
+        "Published: <a href='https://rithvikkasarla.github.io/sorting-visualizer/' target='_blank'>https://rithvikkasarla.github.io/sorting-visualizer/</a>",
+        "Youtube Video:<a href= 'https://www.youtube.com/watch?v=ldOwCBbZcIM' target='_blank'>https://www.youtube.com/watch?v=ldOwCBbZcIM</a>",
       ];
       addLines(text);
       setTimeout(() => {
@@ -281,6 +286,7 @@ function outputs(cmd) {
         "-> Designed and helped develop the website,",
         "-> Setup the SQL database",
         "Tech: VueJs, JavaScript, HTML, C++ ",
+        "Code:<a href='https://github.com/comment-anywhere' target='_blank'>https://github.com/comment-anywhere</a>",
       ];
       addLines(text);
       setTimeout(() => {
@@ -291,13 +297,14 @@ function outputs(cmd) {
       passedCommands.unshift(cmd);
       var text = [
         "<h3>Article Summarizer</h3>",
-        "A chrome extension using NLP, Natural Language Processing, in order to",
+        "A chrome extension created as part of a hackathon team using NLP, Natural Language Processing, in order to",
         "summarize an article that the user is currently on.",
         "-> Created the Chrome extension frontend",
         "-> Developed the connection between the chrome extension and webpage",
         "-> Extracted text utilizing the mercury-parcer library",
         "-> Utilized the BART model trained on the CNN/DailyMail dataset to summarize",
         "Tech: HTML, CSS, JavaScript, BART model, mercury-parcer library",
+        "Code:<a href='https://github.com/RithvikKasarla/quick-summary' target='_blank'>https://github.com/RithvikKasarla/quick-summary</a>",
       ];
       addLines(text);
       setTimeout(() => {
@@ -315,6 +322,7 @@ function outputs(cmd) {
         "-> Trained a forcasting model utilizing sklearn algorithms",
         "-> Plotted the trend with Matplotlib",
         "Tech: Python, numpy, pandas, matplotlib, Sklearn",
+        "Code:<a href='https://github.com/RithvikKasarla/Water_quality' target='_blank'>https://github.com/RithvikKasarla/Water_quality</a>",
       ];
       addLines(text);
       setTimeout(() => {
