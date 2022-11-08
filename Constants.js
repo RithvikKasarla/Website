@@ -24,6 +24,8 @@ var art = [
 var commands = [
   "Whois",
   "Projects",
+  "Clubs",
+  "Jobs",
   "Youtube",
   "Github",
   "Email",
@@ -35,6 +37,8 @@ var commands = [
 var commandDescriptions = [
   "Who is Rithvik Kasarla",
   "Coding Projects Done",
+  "School clubs I am involved in",
+  "Jobs",
   "Youtube Channel",
   "Github Link",
   "To Contact Me",
@@ -60,3 +64,11 @@ var projectTechnologies = [
   "NodeJs, Python(Flask)",
   "Python(Sklearn,Numpy,Pandas, Matplolib)",
 ];
+
+var clubs = [
+  "(1) Case Mate ROV Robotics Team",
+  "(2) Case Kismat Competative Dance Team",
+  "(3) Naach Di Cleveland competition Board",
+];
+
+var jobs = ["(1)Teaching Assistant for Intro to Datastructures"];

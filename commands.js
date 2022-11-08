@@ -71,6 +71,10 @@ document.addEventListener("keydown", function (e) {
 
 var passedCommands = [];
 
+/*
+  Help command
+*/
+
 function addHelpCommand() {
   var responseBody = document.createElement("div");
   responseBody.className = "responseBody";
@@ -89,6 +93,10 @@ function addHelpCommand() {
     }, 100 * commandNumber);
   }
 }
+
+/*
+  List projects that I have completed
+*/
 
 function addProjectCommand() {
   var responseBody = document.createElement("div");
@@ -110,8 +118,47 @@ function addProjectCommand() {
 }
 
 /*
+  Lists current clubs I am involved in
+*/
+
+function addClubsCommand() {
+  var responseBody = document.createElement("div");
+  responseBody.className = "responseBody";
+  document.body.append(responseBody);
+  addNewCommandLine();
+  for (let clubNumber = 0; clubNumber < clubs.length; clubNumber++) {
+    setTimeout(() => {
+      var line = document.createElement("span");
+      line.className = "projectsCommand";
+      responseBody.append(line);
+      line.innerHTML = `<div class="proj">${clubs[clubNumber]}</div><br>`;
+    }, 100 * clubNumber);
+  }
+}
+
+/* 
+  Lists previous/current jobs
+*/
+
+function addJobsCommand() {
+  var responseBody = document.createElement("div");
+  responseBody.className = "responseBody";
+  document.body.append(responseBody);
+  addNewCommandLine();
+  for (let jobNumber = 0; jobNumber < jobs.length; jobNumber++) {
+    setTimeout(() => {
+      var line = document.createElement("span");
+      line.className = "projectsCommand";
+      responseBody.append(line);
+      line.innerHTML = `<div class="proj">${jobs[jobNumber]}</div><br>`;
+    }, 100 * jobNumber);
+  }
+}
+
+/*
   Adds one line of text
 */
+
 function addText(text, linenum) {
   var speed = 10;
   var line = document.createElement("p");
@@ -138,6 +185,7 @@ function lineTime(lines, lineNum) {
 /*
   Goes though the ascii art's lines and sends them to the AddArt function
 */
+
 function addArtLines(lines) {
   var artHolder = document.createElement("div");
   artHolder.className = "art-holder";
@@ -386,6 +434,20 @@ function outputs(cmd) {
     case "clear":
       passedCommands.unshift(cmd);
       document.location.reload(true);
+      break;
+    case "clubs":
+      passedCommands.unshift(cmd);
+      addText("Type clubs followed by number to learn more");
+      setTimeout(() => {
+        addClubsCommand();
+      }, 40);
+      break;
+    case "jobs":
+      passedCommands.unshift(cmd);
+      addText("Type jobs followed by number to learn more");
+      setTimeout(() => {
+        addJobsCommand();
+      }, 40);
       break;
     default:
       addText(
