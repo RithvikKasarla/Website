@@ -263,6 +263,7 @@ window.setInterval(() => {
 */
 function outputs(cmd) {
   switch (cmd.toLowerCase().replace(" ", "")) {
+    case "projects1":
     case "project1":
       passedCommands.unshift(cmd);
 
@@ -285,6 +286,7 @@ function outputs(cmd) {
         addNewCommandLine();
       }, lineTime(text, text.length) + 400);
       break;
+    case "projects2":
     case "project2":
       passedCommands.unshift(cmd);
       var text = [
@@ -296,14 +298,14 @@ function outputs(cmd) {
         "-> Deployed on an AWS EC2 Instance with a Nginx webserver ",
         "Tech: ReactJs, Rest API, ExpressJs, Tailwind CSS, Mongo DB, AWS EC2, Nginx ",
         "Code <a href='https://github.com/RithvikKasarla/UrlShortener' target='_blank'>https://github.com/RithvikKasarla/UrlShortener</a>",
-        "Published: <a href='http://rithvik-dev.com/urls' target='_blank'>http://rithvik-dev.com</a>",
+        "Published: <a href='http://rithvik-dev.com/urls' target='_blank'>http://rithvik-dev.com/urls</a>",
       ];
       addLines(text);
       setTimeout(() => {
         addNewCommandLine();
       }, lineTime(text, text.length) + 500);
       break;
-
+    case "projects3":
     case "project3":
       passedCommands.unshift(cmd);
       var text = [
@@ -322,6 +324,7 @@ function outputs(cmd) {
         addNewCommandLine();
       }, lineTime(text, text.length) + 500);
       break;
+    case "projects4":
     case "project4":
       passedCommands.unshift(cmd);
       var text = [
@@ -341,6 +344,7 @@ function outputs(cmd) {
         addNewCommandLine();
       }, lineTime(text, text.length) + 600);
       break;
+    case "projects5":
     case "project5":
       passedCommands.unshift(cmd);
       var text = [
@@ -359,6 +363,7 @@ function outputs(cmd) {
         addNewCommandLine();
       }, lineTime(text, text.length) + 500);
       break;
+    case "projects6":
     case "project6":
       passedCommands.unshift(cmd);
       var text = [
@@ -449,6 +454,44 @@ function outputs(cmd) {
         addJobsCommand();
       }, 40);
       break;
+    case "job1":
+    case "jobs1":
+      var text = [
+        "I am a Teaching Assistant for the class Intro to Datastructures. I help to tutor other students taking the class",
+        "I also help create and grade homework assignments, and grade tests.",
+        "Start: Aug 21 2022",
+        "Currently Employed",
+      ];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "clubs1":
+    case "club1":
+      text = ["club1 test"];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "clubs2":
+    case "club2":
+      text = ["club2 test"];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+    case "clubs3":
+    case "club3":
+      text = ["club3 text"];
+      addLines(text);
+      setTimeout(() => {
+        addNewCommandLine();
+      }, lineTime(text, text.length));
+      break;
+
     default:
       addText(
         `Not a Command. Type <span class="cmd">help</span> to find more commands`
