@@ -469,7 +469,14 @@ function outputs(cmd) {
       break;
     case "clubs1":
     case "club1":
-      text = ["club1 test"];
+      text = [
+        "The MATE ROV team is focused on creating a robot that maneuvers and does various tasks underwater",
+        "I work on the camera streaming, where I pass the camera feed from the robot to the person outside of the water.",
+        "I also am working on vision part which interprets the camera feed that is passed.",
+        "I used Docker in order to create my development enviornment, as an easy way of having all the tools and dependencies",
+        "</br>",
+        "Tech used: Docker, ROS Galactic(Robotics Operating System)",
+      ];
       addLines(text);
       setTimeout(() => {
         addNewCommandLine();
@@ -477,7 +484,12 @@ function outputs(cmd) {
       break;
     case "clubs2":
     case "club2":
-      text = ["club2 test"];
+      text = [
+        "</br>",
+        "I am a member of the competitve Indian American fusion Dance team that competes across the US",
+        "as apart of the Desi Dance network circuit.",
+        "</br>",
+      ];
       addLines(text);
       setTimeout(() => {
         addNewCommandLine();
@@ -485,13 +497,18 @@ function outputs(cmd) {
       break;
     case "clubs3":
     case "club3":
-      text = ["club3 text"];
+      text = [
+        "</br>",
+        "I am apart of the Board that helps to plan one of the major Dance competitions apart of the Desi dance network circuit",
+        "That occurs at CWRU. I am tasked with managing the nutritional intake of every dancer, board member, judge, and antendee",
+        "during the competition weekend in order to ensure the nationally partnered competiiton runs smoothly",
+        "</br>",
+      ];
       addLines(text);
       setTimeout(() => {
         addNewCommandLine();
       }, lineTime(text, text.length));
       break;
-
     default:
       addText(
         `Not a Command. Type <span class="cmd">help</span> to find more commands`
