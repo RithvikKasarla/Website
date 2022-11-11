@@ -486,8 +486,11 @@ function outputs(cmd) {
     case "club2":
       text = [
         "</br>",
-        "I am a member of the competitve Indian American fusion Dance team that competes across the US",
-        "as apart of the Desi Dance network circuit.",
+        "Aim to promote awareness and involvement of Indian fusion - a dance team incoporating cutural elements from Punjab, SouthIndian",
+        "regions and Western hip hop",
+        "Competing at a national level, on the intercollegiate fusion circuit representing Case Wester Reserve University with passion  .",
+        "Provide the campus and Greater Cleveland community with an opportunity to learn more about the cultural significance of this",
+        "dance by dedicating 10+ hours/week of practices, choreography design and competition applicaion",
         "</br>",
       ];
       addLines(text);
