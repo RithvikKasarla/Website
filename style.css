@@ -1,3 +1,6 @@
+html{
+    zoom: 0.8;
+}
 .app{
     background-color: rgb(20, 20, 20);
     color: #a9d39e;
