@@ -5,23 +5,24 @@ var EMAIL = "rithvikrk719@gmail.com";
 var art = [
   "              +              /    ",
   "  \\           |           /      ",
-  "    \\         |         /         _/_/_/    _/    _/      _/                   _/   _/            _/    _/                                          _/           ",
-  "      \\      / \\     /           _/    _/      _/_/_/_/  _/        _/      _/      _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/  ",
+  "    \\         |         /         _/_/_/    _/    _/      _/                   _/   _/            _/    _/                                          _/             ",
+  "      \\      / \\     /           _/    _/      _/_/_/_/  _/        _/      _/      _/  _/        _/  _/      _/_/_/    _/_/_/    _/_/_/  _/  _/_/  _/    _/_/_/   ",
   "        \\  /_____\\ /             _/_/_/    _/    _/      _/_/_/_/  _/    _/  _/   _/_/          _/_/      _/    _/  _/_/      _/    _/  _/_/      _/  _/    _/    ",
-  "        /  |__|__|  \\            _/   _/   _/    _/      _/   _/    _/ _/    _/   _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/     ",
-  "      /  |;|     |;| \\           _/   _/  _/      _/_/  _/   _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/      ",
-  "    /    \\.    .  /   \\                                                                                                                                          ",
-  "  /       ||:  .  |      \\      ",
-  "          ||:     |        \\    ",
-  "          ||:     |                                          /`\\",
+  "        /  |__|__|  \\            _/   _/   _/    _/      _/   _/    _/ _/    _/   _/  _/        _/  _/    _/    _/      _/_/  _/    _/  _/        _/  _/    _/      ",
+  "      /  |;|     |;| \\           _/   _/  _/      _/_/  _/   _/      _/      _/  _/    _/      _/    _/    _/_/_/  _/_/_/      _/_/_/  _/        _/    _/_/_/       ",
+  "    /    \\.    .  /   \\                                                                                                                                           ",
+  "  /       ||:  .  |      \\                              ",
+  "          ||:     |        \\                                      ",
+  "          ||:     |                                          /`\\   ",
   "          ||: _ . |                             /`\\",
-  "         _||_| |__|       /`\\           ____",
-  "    ____~    |_|  |___           __-----~    ~`---,__             ___            _----~`---,__             ___",
-  "  -~                  ~---___,--~'                  ~~----_____-~'    ---___,--~'             ~~----_____-~",
+  "         _||_| |__|       /`\\           ____                                                                   ", //  | Terminal Portfolio Website                              |",
+  "    ____~    |_|  |___           __-----~    ~`---,__             ___            _----~`---,__             ___  ", // | Commands are highlighted in blue                        |",
+  "  -~                  ~---___,--~'                  ~~----_____-~'    ---___,--~'             ~~----_____-~     ", // | Type in commands to get more information about my work  |",
   "  `~----,____                      ",
 ];
 
 var commands = [
+  "<u>List of Commands</u>",
   "Whois",
   "Projects",
   "Clubs",
@@ -35,15 +36,16 @@ var commands = [
 ];
 
 var commandDescriptions = [
+  "<u>Description of the commands</u>",
   "Who is Rithvik Kasarla",
-  "Coding Projects Done",
+  "Coding Projects I worked on",
   "School clubs I am involved in",
-  "Jobs",
-  "Youtube Channel",
-  "Github Link",
-  "To Contact Me",
+  "My Previous Work Experience",
+  "My Youtube Channel",
+  "My Github",
+  "My Email Contact Info",
   "GUI Website",
-  "Refresh page",
+  "To Refresh page",
   "You know What This Does",
 ];
 

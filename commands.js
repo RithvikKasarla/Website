@@ -4,7 +4,7 @@ window.onload = function (e) {
   setTimeout(() => addArtLines(art), 20);
   setTimeout(() => {
     addText(
-      "Type  <spam class='cmd'>help</spam> to see a list of commands or type <spam class='cmd'>website</spam> to see gui website"
+      "<br> Type  <spam class='cmd'>help</spam> to see a list of commands and learn more about my work <br> <br>" //or type <spam class='cmd'>website</spam> to see gui website
     );
   }, 1800);
 
@@ -19,9 +19,13 @@ window.onload = function (e) {
     </div>`;
     var elem = document.getElementsByClassName("input");
 
-    elem[0].value = "";
+    elem[0].value = "help";
     elem[0].focus();
-    elem[0].select();
+    if (elem[0].readOnly == false) {
+      elem[0].readOnly = "true";
+      outputs(elem[0].value);
+    }
+    console.log(passedCommands);
   }, 2000);
 };
 
@@ -257,6 +261,14 @@ window.setInterval(() => {
   var ta = document.getElementsByTagName("input");
   ta[ta.length - 1].scrollIntoView();
 }, 100);
+
+/*
+  Focus cursor on the last input
+*/
+window.setInterval(() => {
+  var ta = document.getElementsByTagName("input");
+  ta[ta.length - 1].focus();
+}, 500);
 
 /*
   Switch Statement for the outputs of every command
